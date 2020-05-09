@@ -1,0 +1,7 @@
+*.pyc
+.idea
+*.pid
+*node_modules/
+*venv/
+default.py
+settings_development.py
