@@ -89,6 +89,7 @@ class BaseMpttModel(MPTTModel):
 
 
 class Summary(BaseMpttModel):
+    id = models.CharField("ID", max_length=80, primary_key=True)
     subject_title = models.CharField(u"科目名称", max_length=LEN_NORMAL, default=u'')
     chapter = models.CharField(u"章节号", max_length=LEN_SHORT, default=u'')
     content = models.CharField(u"总结内容", max_length=LEN_X_LONG, default=u'')
