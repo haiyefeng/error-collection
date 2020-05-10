@@ -11,5 +11,13 @@ export default {
     // 查看总结
     getSummary: function (params) {
         return $axios.get('/misset/summary/get_mptt_summary/', params)
+    },
+    // 修改总结内容
+    editSummary: function (params) {
+        return $axios.post(`/misset/summary/batch_create/`, params)
+    },
+    // 修改总结内容
+    selectInfo: function (params) {
+        return $axios.post(`/misset/select_info/`, params)
     }
 }

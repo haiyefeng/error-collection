@@ -1,6 +1,7 @@
 <template>
   <div class="homecontainer">
     <div class="fixbtn" :style="isCollapse ? 'left: 10%' : 'left: 16%'">
+      <select-box :modelName="modelName"></select-box>
       <el-button @click="changeEdit" type="primary" icon="el-icon-edit">{{edit}}</el-button>
     </div>
     <div class="errorsubject" :style="isCollapse ? 'left: 10%' : 'left: 15%'">
@@ -12,13 +13,16 @@
 <script>
 import Subject from '@/components/errorSubject'
 import { mapGetters, mapMutations } from 'vuex'
+import SelectBox from '@/components/selectBox'
 
 export default {
   components: {
     'error-subject': Subject,
+    'select-box': SelectBox,
   },
   data() {
     return {
+      modelName: 'Mistake',
       errorList: [],
       edit: '编辑',
       isEdit: false,
@@ -77,7 +81,6 @@ export default {
   height: 100%;
 }
 .fixbtn {
-  background: red;
   position: fixed;
   top: 6%;
 }
